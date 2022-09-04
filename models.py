@@ -6,6 +6,7 @@ import sqlalchemy.orm as orm
 
 from database import Base
 
+
 class User(Base):
     __tablename__ = 'user'
     id = sql.Column(sql.Integer, primary_key=True, index=True)
@@ -26,6 +27,3 @@ class Post(Base):
     date_updated = sql.Column(sql.DateTime, default=datetime.datetime.now)
 
     owner = orm.relationship("User", back_populates='posts')
-
-
-

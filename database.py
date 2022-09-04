@@ -14,5 +14,5 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
-db = databases.Database(DATABASE_URL)
+DB = databases.Database(DATABASE_URL)
 
