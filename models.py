@@ -1,4 +1,3 @@
-from email.policy import default
 import datetime
 
 import sqlalchemy as sql

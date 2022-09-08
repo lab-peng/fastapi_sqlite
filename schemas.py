@@ -3,6 +3,11 @@ from pydantic import BaseModel
 from typing import List
 
 
+class Data(BaseModel):
+    data: str
+    sign: str
+
+
 class PostBase(BaseModel):
     title: str
     content: str
@@ -38,9 +43,18 @@ class User(UserBase):
     class Config:
         orm_mode = True
 
+
 # {
 #   "email": "abc@gmail.com",
 #   "id": 1,
 #   "is_active": true,select * from user;
 #   "posts": []
 # }
+
+class Query(BaseModel):
+    bjbh: str = 'nbcx0000'
+    zl: str
+    bjqx: str
+    ytmc: str
+    mj: float
+    tdmj: float = 0
